@@ -12,10 +12,12 @@ body{
     background: var(--color-primary-red) url('images/bg-intro-desktop.png');
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0;2
     padding: 0;
 }
-
+h1{
+    font-size:3.125rem;
+}
 main{
     margin: auto;
     display: grid;
@@ -41,7 +43,8 @@ main{
 #bottom{
     background-color:white;
     border-radius: 6px;
-    padding:20px 10px;
+    padding:30px;
+    box-shadow:0px 6px 0px rgb(0 0 0 / 15%)
 }
 
 /* Form */
@@ -57,31 +60,37 @@ main{
 }
 form{
     display:flex;
+    font-weight:700;
+
     gap:22px;
     flex-direction:column;
     align-items:center;
     justify-content: center;
 }
 form input{
-    width:450px;
+    font-weight:700;
+    box-sizing:border-box;
+    width:400px;
     padding:15px;
     border:1px solid rgb(235, 235, 235);
     border-radius:5px;
 }
+input::placeholder{
+    font-weight:700;
+}
 .btn-submit{
     display:block;
     text-transform: uppercase;
-    font-weight:500;
     padding:15px 35px;
     color:white;
     border:none;
     background-color:var(--color-primary-green);
-    width:481px;
     box-shadow:inset 0px -3px rgba(0, 0, 0, 15%);
 }
 .right-footer{
     text-align:center;
     font-size: 10px;
+    color:rgb(143, 143, 143);
 }
 .right-footer a{
     text-decoration: none;
