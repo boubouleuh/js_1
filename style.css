@@ -25,6 +25,7 @@ body{
 
 /* END CODE OF LEFT OF THE PAGE  */
 main{
+    margin: auto;
     display:grid;
     justify-items:center;
     align-items:center;
