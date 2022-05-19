@@ -100,3 +100,31 @@ input::placeholder{
     font-weight:bold;
     color:var(--color-primary-red);
 }
+
+@media all and (max-width:415px){
+    main{
+        display:flex;
+        flex-direction: column;
+        width:92%;
+        justify-content:center;
+    }
+    h1{
+        font-size:2rem;
+    }
+    #left-container{
+        text-align: center;
+        padding:10px;
+    }
+    #right-container{
+        width:100%;
+    }
+
+    form input{
+        width:auto;
+        padding:15px 78px;
+    
+    }
+    .btn-submit{
+        padding: 15px 83px;
+    }
+}
