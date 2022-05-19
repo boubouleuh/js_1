@@ -107,22 +107,35 @@ input::placeholder{
         flex-direction: column;
         width:92%;
         justify-content:center;
+        margin-bottom:10%;
     }
+
     h1{
         font-size:2rem;
     }
+
     #left-container{
         text-align: center;
         padding:10px;
     }
+
     #right-container{
         width:100%;
     }
 
+    #top{
+        padding:25px;
+        text-align:center;
+        margin-bottom:40px;
+    }
+
+    .try{
+        width:200px;
+    }
+
     form input{
         width:auto;
-        padding:15px 78px;
-    
+    padding-right:139px;
     }
     .btn-submit{
         padding: 15px 83px;
