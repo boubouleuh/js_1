@@ -61,6 +61,7 @@ main{
 form{
     display:flex;
     font-weight:700;
+
     gap:22px;
     flex-direction:column;
     align-items:center;
@@ -85,10 +86,6 @@ input::placeholder{
     border:none;
     background-color:var(--color-primary-green);
     box-shadow:inset 0px -3px rgba(0, 0, 0, 15%);
-}
-.btn-submit:hover{
-    background-color:rgba(56, 204, 140, 0.65);
-    cursor:pointer;
 }
 .right-footer{
     text-align:center;
