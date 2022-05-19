@@ -20,12 +20,12 @@ h1{
 }
 main{
     margin: auto;
+    margin-bottom:40px;
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     width: 1440px;
-    height: 100vh;
 }
 /* START CODE OF LEFT OF THE PAGE  */
 #left-container
@@ -69,7 +69,6 @@ form{
 form input{
     font-weight:700;
     box-sizing:border-box;
-    width:400px;
     padding:15px;
     border:1px solid rgb(235, 235, 235);
     border-radius:5px;
@@ -103,10 +102,10 @@ input::placeholder{
 
 @media all and (max-width:415px){
     main{
-        display:flex;
-        flex-direction: column;
-        width:92%;
-        justify-content:center;
+        display:grid;
+        grid-template-columns: 1fr;
+        width:90%;
+        padding:0;
         margin-bottom:10%;
     }
 
@@ -126,18 +125,20 @@ input::placeholder{
     #top{
         padding:25px;
         text-align:center;
+        height:auto;
         margin-bottom:40px;
     }
 
     .try{
         width:200px;
     }
-
+form{
+    width:100%;
+}
     form input{
-        width:auto;
-    padding-right:139px;
+    padding-right:25%;
     }
     .btn-submit{
-        padding: 15px 83px;
+        padding: 15px 17.2%;
     }
 }
