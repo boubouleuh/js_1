@@ -28,26 +28,116 @@
 //         }}
 //     });
 //     })
-const btn = document.querySelector(".btn-submit");
-var tab = [];
-const input = document.querySelectorAll("input");
-for (var i=0; i < 4; i++){
-    tab.push([input[i],input[i].getAttribute("name")]);
-}
-for (var i=0; i < tab.length; i++){
-    console.log(i);
-    btn.addEventListener('click', () => {
-        console.log(i);
-        tab[i][i].addEventListener('invalid', () => {
-            if(item.value === '') {
-                const text = document.createTextNode(`[${item.getAttribute("name")}] cannot be empty`);
-                const createSpan = document.createElement("span");
-                createSpan.setAttribute("id","error");
-                createSpan.append(text);
-                item.after(createSpan);
-            }
 
-        });
-    })
-}
-    
+
+// Il y a plusieurs façon de sélectionner un nœud DOM ; ici on récupère
+// le formulaire et le champ d'e-mail ainsi que l'élément span
+// dans lequel on placera le message d'erreur
+
+var form  = document.getElementsByTagName('form')[0];
+
+var firstName = document.getElementById('first-name');
+var lastName = document.getElementById('last-name');
+var email = document.getElementById('mail');
+var password = document.getElementById('password');
+var label1 = document.getElementById('label1');
+var label2 = document.getElementById('label2');
+var label3 = document.getElementById('label3');
+var label4 = document.getElementById('label4');
+// var error = document.querySelector('.error');
+
+firstName.addEventListener("input", function (event) {
+  // Chaque fois que l'utilisateur saisit quelque chose
+  // on vérifie la validité du champ e-mail.
+  if (firstName.validity.valid) {
+    // S'il y a un message d'erreur affiché et que le champ
+    // est valide, on retire l'erreur
+    label1.querySelector('.error').innerHTML = ""; // On réinitialise le contenu
+    label1.querySelector('.error').className = "error"; // On réinitialise l'état visuel du message
+  }
+}, false);
+
+form.addEventListener("submit", function (event) {
+  // Chaque fois que l'utilisateur tente d'envoyer les données
+  // on vérifie que le champ email est valide.
+  if (!firstName.validity.valid) {
+
+    // S'il est invalide, on affiche un message d'erreur personnalisé
+    error.innerHTML = "First name cannot be empty";
+    error.className = "error active";
+    // Et on empêche l'envoi des données du formulaire
+    event.preventDefault();
+  }
+}, false);
+
+lastName.addEventListener("input", function (event) {
+  // Chaque fois que l'utilisateur saisit quelque chose
+  // on vérifie la validité du champ e-mail.
+  if (lastName.validity.valid) {
+    // S'il y a un message d'erreur affiché et que le champ
+    // est valide, on retire l'erreur
+    error.innerHTML = ""; // On réinitialise le contenu
+    error.className = "error"; // On réinitialise l'état visuel du message
+  }
+}, false);
+
+form.addEventListener("submit", function (event) {
+  // Chaque fois que l'utilisateur tente d'envoyer les données
+  // on vérifie que le champ email est valide.
+  if (!lastName.validity.valid) {
+
+    // S'il est invalide, on affiche un message d'erreur personnalisé
+    error.innerHTML = "Last name cannot be empty";
+    error.className = "error active";
+    // Et on empêche l'envoi des données du formulaire
+    event.preventDefault();
+  }
+}, false);
+
+email.addEventListener("input", function (event) {
+  // Chaque fois que l'utilisateur saisit quelque chose
+  // on vérifie la validité du champ e-mail.
+  if (email.validity.valid) {
+    // S'il y a un message d'erreur affiché et que le champ
+    // est valide, on retire l'erreur
+    error.innerHTML = ""; // On réinitialise le contenu
+    error.className = "error"; // On réinitialise l'état visuel du message
+  }
+}, false);
+
+form.addEventListener("submit", function (event) {
+  // Chaque fois que l'utilisateur tente d'envoyer les données
+  // on vérifie que le champ email est valide.
+  if (!email.validity.valid) {
+
+    // S'il est invalide, on affiche un message d'erreur personnalisé
+    error.innerHTML = "Looks like this is not an email";
+    error.className = "error active";
+    // Et on empêche l'envoi des données du formulaire
+    event.preventDefault();
+  }
+}, false);
+
+password.addEventListener("input", function (event) {
+  // Chaque fois que l'utilisateur saisit quelque chose
+  // on vérifie la validité du champ e-mail.
+  if (password.validity.valid) {
+    // S'il y a un message d'erreur affiché et que le champ
+    // est valide, on retire l'erreur
+    error.innerHTML = ""; // On réinitialise le contenu
+    error.className = "error"; // On réinitialise l'état visuel du message
+  }
+}, false);
+
+form.addEventListener("submit", function (event) {
+  // Chaque fois que l'utilisateur tente d'envoyer les données
+  // on vérifie que le champ email est valide.
+  if (!password.validity.valid) {
+
+    // S'il est invalide, on affiche un message d'erreur personnalisé
+    error.innerHTML = "Looks like this is not an email";
+    error.className = "error active";
+    // Et on empêche l'envoi des données du formulaire
+    event.preventDefault();
+  }
+}, false);
