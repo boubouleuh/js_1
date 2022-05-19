@@ -26,6 +26,7 @@ main{
     align-items: center;
     grid-template-columns: 1fr 1fr;
     width: 1440px;
+    height:100vh;
 }
 /* START CODE OF LEFT OF THE PAGE  */
 #left-container
@@ -69,7 +70,8 @@ form{
 form input{
     font-weight:700;
     box-sizing:border-box;
-    padding:15px;
+    padding:15px 30px;
+    padding-right:25%;
     border:1px solid rgb(235, 235, 235);
     border-radius:5px;
 }
@@ -80,6 +82,7 @@ input::placeholder{
     display:block;
     text-transform: uppercase;
     padding:15px 35px;
+    padding-right:27%;
     color:white;
     border:none;
     background-color:var(--color-primary-green);
