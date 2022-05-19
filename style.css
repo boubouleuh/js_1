@@ -26,6 +26,7 @@ main{
     align-items: center;
     grid-template-columns: 1fr 1fr;
     width: 1440px;
+    height:100vh;
 }
 /* START CODE OF LEFT OF THE PAGE  */
 #left-container
