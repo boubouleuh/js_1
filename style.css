@@ -13,3 +13,13 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* START CODE OF LEFT OF THE PAGE  */
+
+#left-container
+{
+    grid-column: 1;
+    color:white;
+}
+
+/* END CODE OF LEFT OF THE PAGE  */
