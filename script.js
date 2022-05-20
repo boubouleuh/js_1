@@ -134,7 +134,7 @@ form.addEventListener("submit", function (event) {
   if (!password.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    label4.querySelector('.error').innerHTML = "Looks like this is not an email";
+    label4.querySelector('.error').innerHTML = "Password cannot be empty";
     label4.querySelector('.error').className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
