@@ -1,9 +1,6 @@
 
-
-
 var label = document.querySelectorAll("label")
 var input = document.querySelectorAll("input")
-var errormess = ["First name cannot be empty",""]
 function forminput(i) {
     input[i].addEventListener("input", function (event) {
         // Chaque fois que l'utilisateur saisit quelque chose
