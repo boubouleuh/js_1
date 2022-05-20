@@ -1,4 +1,3 @@
-
 // document.querySelectorAll('.text').forEach(item => {
 //     item.addEventListener('input', () => {
 //         item.setCustomValidity('');
@@ -63,8 +62,8 @@ form.addEventListener("submit", function (event) {
   if (!firstName.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "First name cannot be empty";
-    error.className = "error active";
+    label1.querySelector('.error').innerHTML = "First name cannot be empty";
+    label1.querySelector('.error').className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
   }
@@ -76,8 +75,8 @@ lastName.addEventListener("input", function (event) {
   if (lastName.validity.valid) {
     // S'il y a un message d'erreur affiché et que le champ
     // est valide, on retire l'erreur
-    error.innerHTML = ""; // On réinitialise le contenu
-    error.className = "error"; // On réinitialise l'état visuel du message
+    label2.querySelector('.error').innerHTML = ""; // On réinitialise le contenu
+    label2.querySelector('.error').className = "error"; // On réinitialise l'état visuel du message
   }
 }, false);
 
@@ -87,8 +86,8 @@ form.addEventListener("submit", function (event) {
   if (!lastName.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "Last name cannot be empty";
-    error.className = "error active";
+    label2.querySelector('.error').innerHTML = "Last name cannot be empty";
+    label2.querySelector('.error').className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
   }
@@ -100,8 +99,8 @@ email.addEventListener("input", function (event) {
   if (email.validity.valid) {
     // S'il y a un message d'erreur affiché et que le champ
     // est valide, on retire l'erreur
-    error.innerHTML = ""; // On réinitialise le contenu
-    error.className = "error"; // On réinitialise l'état visuel du message
+    label3.querySelector('.error').innerHTML = ""; // On réinitialise le contenu
+    label3.querySelector('.error').className = "error"; // On réinitialise l'état visuel du message
   }
 }, false);
 
@@ -111,8 +110,8 @@ form.addEventListener("submit", function (event) {
   if (!email.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "Looks like this is not an email";
-    error.className = "error active";
+    label3.querySelector('.error').innerHTML = "Looks like this is not an email";
+    label3.querySelector('.error').className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
   }
@@ -124,8 +123,8 @@ password.addEventListener("input", function (event) {
   if (password.validity.valid) {
     // S'il y a un message d'erreur affiché et que le champ
     // est valide, on retire l'erreur
-    error.innerHTML = ""; // On réinitialise le contenu
-    error.className = "error"; // On réinitialise l'état visuel du message
+    label4.querySelector('.error').innerHTML = ""; // On réinitialise le contenu
+    label4.querySelector('.error').className = "error"; // On réinitialise l'état visuel du message
   }
 }, false);
 
@@ -135,8 +134,8 @@ form.addEventListener("submit", function (event) {
   if (!password.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "Looks like this is not an email";
-    error.className = "error active";
+    label4.querySelector('.error').innerHTML = "Looks like this is not an email";
+    label4.querySelector('.error').className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
   }
