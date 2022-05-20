@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root{
-    --color-primary-red: hsl(0, 100%, 74%);
+    --color-primary-red: #ff7a7a;
     --color-primary-green :hsl(154, 59%, 51%);
     --color-accent-blue: hsl(248, 32%, 49%);
     --color-neutral-dark-blue: hsl(249, 10%, 26%) ;

@@ -1,6 +1,7 @@
 
 var label = document.querySelectorAll("label")
 var input = document.querySelectorAll("input")
+
 function forminput(i) {
     input[i].addEventListener("input", function (event) {
         // Chaque fois que l'utilisateur saisit quelque chose
@@ -15,7 +16,6 @@ function forminput(i) {
       }, false);
 }
 
-  
   form.addEventListener("submit", function (event) {
     for (var i=0; i < label.length ; i++){
         if (input[i].getAttribute("name") === "mail" && !input[i].validity.valueMissing){
