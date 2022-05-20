@@ -10,7 +10,9 @@ function forminput(i) {
           // S'il y a un message d'erreur affiché et que le champ
           // est valide, on retire l'erreur
           label[i].querySelector('.error').innerHTML = "";// On réinitialise le contenu
-          input[i].style.border = "none" 
+          input[i].style.border = "1px solid #ebebeb" 
+          input[i].style.color = "black" 
+          input[i].style.background = ""   
           label[i].querySelector('.error').className = "error"; // On réinitialise l'état visuel du message
         }
       }, false);
@@ -28,7 +30,10 @@ function forminput(i) {
     // on vérifie que le champ email est valide.
     forminput(i)
     if (!input[i].validity.valid) { 
-      input[i].style.border = "1px solid #ff7a7a"
+      input[i].style.color = "#ff7a7a"  
+      input[i].style.border = "2px solid #ff7a7a"
+      input[i].placeholder = ''
+      input[i].style.background = "url('images/icon-error.svg') no-repeat right 10px center"     
       // S'il est invalide, on affiche un messagd'erreur personnalisé
       label[i].querySelector('.error').innerHTML = error;
       label[i].querySelector('.error').className = "error active";
